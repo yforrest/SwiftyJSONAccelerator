@@ -45,7 +45,7 @@ struct NameGenerator {
   static func fixVariableName(_ variableName: String) -> String {
 
     var _variableName = replaceKeywords(variableName)
-    _variableName.replaceOccurrencesOfStringsWithString(["-", "_"], " ")
+    //_variableName.replaceOccurrencesOfStringsWithString(["-", "_"], " ")
     _variableName.trim()
 
     var finalVariableName = ""
@@ -68,9 +68,9 @@ struct NameGenerator {
    */
   static func replaceKeywords(_ currentName: String) -> String {
 
-    let keywordsWithReplacements = ["id": "internalIdentifier",
+    let keywordsWithReplacements = ["id": "id",
       "description": "descriptionValue",
-      "_id": "internalIdentifier",
+      "_id": "_id",
       "class": "classProperty",
       "struct": "structProperty",
       "enum": "enumProperty",
